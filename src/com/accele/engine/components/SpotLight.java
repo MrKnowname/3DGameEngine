@@ -1,25 +1,19 @@
-package com.accele.engine.render;
+package com.accele.engine.components;
 
 import com.accele.engine.core.Vector3f;
+import com.accele.engine.render.ForwardSpot;
 
-public class SpotLight {
+public class SpotLight extends PointLight {
 	
-	private PointLight pointLight;
 	private Vector3f direction;
 	private float cutoff;
 	
-	public SpotLight(PointLight pointLight, Vector3f direction, float cutoff) {
-		this.pointLight = pointLight;
+	public SpotLight(Vector3f color, float intensity, float constant, float linear, float exponent, Vector3f position, float range, Vector3f direction, float cutoff) {
+		super(color, intensity, constant, linear, exponent, position, range);
 		this.direction = direction.normalized();
 		this.cutoff = cutoff;
-	}
-	
-	public PointLight getPointLight() {
-		return pointLight;
-	}
-	
-	public void setPointLight(PointLight pointLight) {
-		this.pointLight = pointLight;
+		
+		setShader(ForwardSpot.getInstance());
 	}
 	
 	public Vector3f getDirection() {

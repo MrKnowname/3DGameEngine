@@ -1,5 +1,7 @@
 package com.accele.engine.core;
 
+import com.accele.engine.components.GameComponent;
+import com.accele.engine.render.RenderingEngine;
 import com.accele.engine.render.Shader;
 
 import java.util.ArrayList;
@@ -46,6 +48,14 @@ public class GameObject {
 
 		for(GameObject child : children)
 			child.render(shader);
+	}
+	
+	public void addToRenderingEngine(RenderingEngine renderingEngine) {
+		for(GameComponent component : components)
+			component.addToRenderingEngine(renderingEngine);
+
+		for(GameObject child : children)
+			child.addToRenderingEngine(renderingEngine);
 	}
 
 	public Transform getTransform() {

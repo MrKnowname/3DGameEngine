@@ -1,5 +1,6 @@
 package com.accele.engine.core;
 
+import com.accele.engine.render.RenderingEngine;
 import com.accele.engine.render.Window;
 
 public class CoreEngine {
