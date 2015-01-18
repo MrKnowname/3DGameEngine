@@ -1,6 +1,5 @@
 package com.accele.engine.components;
 
-import com.accele.engine.core.Transform;
 import com.accele.engine.render.Material;
 import com.accele.engine.render.Mesh;
 import com.accele.engine.render.Shader;
@@ -16,9 +15,9 @@ public class MeshRenderer extends GameComponent {
 	}
 
 	@Override
-	public void render(Transform transform, Shader shader) {
+	public void render(Shader shader) {
 		shader.bind();
-		shader.updateUniforms(transform, material);
+		shader.updateUniforms(getTransform(), material);
 		mesh.draw();
 	}
 	
