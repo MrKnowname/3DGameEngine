@@ -147,21 +147,5 @@ public class OBJModel {
 		
 		return result;
 	}
-
-//	public ArrayList<Vector3f> getPositions() {
-//		return positions;
-//	}
-//
-//	public ArrayList<Vector2f> getTexCoords() {
-//		return texCoords;
-//	}
-//
-//	public ArrayList<Vector3f> getNormals() {
-//		return normals;
-//	}
-//
-//	public ArrayList<OBJIndex> getIndices() {
-//		return indices;
-//	}
 	
 }

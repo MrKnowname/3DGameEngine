@@ -1,10 +1,12 @@
 package com.accele.engine.core;
 
+import java.nio.ByteBuffer;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
 import java.util.ArrayList;
 
 import com.accele.engine.render.Vertex;
+
 import org.lwjgl.BufferUtils;
 
 public class Util {
@@ -15,6 +17,10 @@ public class Util {
 	
 	public static IntBuffer createIntBuffer(int size) {
 		return BufferUtils.createIntBuffer(size);
+	}
+	
+	public static ByteBuffer createByteBuffer(int size) {
+		return BufferUtils.createByteBuffer(size);
 	}
 	
 	public static IntBuffer createFlippedBuffer(int... values) {
